@@ -108,7 +108,7 @@ function HowItWorksSection() {
   const steps = [
     { num: "01", title: "Register & Choose Role", desc: "Sign up as a Shipper, Tug Owner, or Barge Owner" },
     { num: "02", title: "List or Post", desc: "Owners list their vessels. Shippers post cargo shipment requests." },
-    { num: "03", title: "AI Matching", desc: "Click "Find Best Vessels" — Claude AI ranks all available vessels and explains each match." },
+    { num: "03", title: "AI Matching", desc: 'Click "Find Best Vessels" — Claude AI ranks all available vessels and explains each match.' },
     { num: "04", title: "Review & Book", desc: "See AI route plans, pricing breakdowns, and risk notes. Book with one click." },
   ];
 
