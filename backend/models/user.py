@@ -11,6 +11,7 @@ class UserRole(str, Enum):
     TUG_OWNER = "tug_owner"
     BARGE_OWNER = "barge_owner"
     SHIPPER = "shipper"
+    ADMIN = "admin"
 
 
 class User(Base):

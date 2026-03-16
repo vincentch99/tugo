@@ -1,4 +1,4 @@
-export type UserRole = "tug_owner" | "barge_owner" | "shipper";
+export type UserRole = "tug_owner" | "barge_owner" | "shipper" | "admin";
 export type VesselType = "tug" | "barge";
 export type ShipmentStatus = "open" | "matched" | "booked" | "completed" | "cancelled";
 export type BookingStatus = "pending" | "confirmed" | "in_transit" | "completed" | "cancelled";

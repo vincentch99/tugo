@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useAuth } from "@/lib/auth";
 import { Button } from "./ui/Button";
-import { Anchor, Ship, Package, BookOpen, LayoutDashboard, LogOut } from "lucide-react";
+import { Anchor, Ship, Package, BookOpen, LayoutDashboard, LogOut, ShieldCheck } from "lucide-react";
 
 export function Navbar() {
   const { user, logout, isAuthenticated } = useAuth();
@@ -53,6 +53,15 @@ export function Navbar() {
                 <BookOpen className="w-4 h-4" />
                 Bookings
               </Link>
+              {user?.role === "admin" && (
+                <Link
+                  href="/admin"
+                  className="flex items-center gap-1.5 text-ocean-400 hover:text-ocean-300 px-3 py-2 rounded-lg hover:bg-navy-800 text-sm transition-colors"
+                >
+                  <ShieldCheck className="w-4 h-4" />
+                  Admin
+                </Link>
+              )}
             </div>
           )}
 

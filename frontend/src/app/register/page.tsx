@@ -62,6 +62,7 @@ export default function RegisterPage() {
             <option value="shipper">Shipper (I need cargo transported)</option>
             <option value="tug_owner">Tug Owner (I own tug boats)</option>
             <option value="barge_owner">Barge Owner (I own barges)</option>
+            <option value="admin">Platform Admin</option>
           </Select>
 
           <Input label="Full Name" value={form.full_name} onChange={(e) => set("full_name", e.target.value)} placeholder="Your full name" required />
