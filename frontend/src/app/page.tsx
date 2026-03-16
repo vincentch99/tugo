@@ -1,5 +1,10 @@
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Anchor, Bot, Navigation, DollarSign, Ship, Package, CheckCircle, ArrowRight, MapPin } from "lucide-react";
+import { useAuth } from "@/lib/auth";
 
 function HeroSection() {
   return (
@@ -227,6 +232,17 @@ function CTASection() {
 }
 
 export default function LandingPage() {
+  const { isAuthenticated, loading } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!loading && isAuthenticated) {
+      router.replace("/dashboard");
+    }
+  }, [isAuthenticated, loading, router]);
+
+  if (loading || isAuthenticated) return null;
+
   return (
     <>
       <HeroSection />

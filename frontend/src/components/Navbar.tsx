@@ -13,7 +13,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href={isAuthenticated ? "/dashboard" : "/"} className="flex items-center gap-2 group">
             <div className="w-8 h-8 bg-ocean-500 rounded-lg flex items-center justify-center group-hover:bg-ocean-400 transition-colors">
               <Anchor className="w-5 h-5 text-white" />
             </div>
